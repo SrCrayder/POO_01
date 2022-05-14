@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO 2.3</title>
+</head>
+
+<body>
+
+
+    <script>
+        class User {
+
+            // Atributos privados
+            name = '';
+            #email = '';
+            #password = '';
+
+            // Método
+            setUser(userName, userEmail, userPass){
+this.#name = userName;
+this.#email = userEmail;
+this.#password = userPass;
+
+
+
+            }
+        }
+// instância
+var admin = new User;
+// Definindo atributos.
+admin.setUser('Maricleusa', 'mari@cleusa.com', 'Qwertyu10p');
+
+
+// Saida.
+console.log('admin: ', admin);
+
+        
+
+
+    </script>
+</body>
+
+</html>

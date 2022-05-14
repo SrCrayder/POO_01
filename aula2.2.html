@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO 2.2</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Classe que define usuários do tipo User.
+        class User {
+
+            // Atributos privados.
+            #name;
+            #email;
+            #password;
+
+            // Método 'set'.
+            setUser(name, email, pass) {
+
+                // Remove excesso de espaços no mome antes de atribuir.
+                this.#name = name.trim().replace(/\s+/g, " ");
+
+                // Valida e-mail.
+                if (this.#testEmail(email))
+                    this.#email = email;
+                else {
+                    console.error('E-mail inválido.');
+                    return false;
+                }
+
+                // Valida a senha.
+                if (this.#testPass(pass))
+                    this.#password = pass;
+                else {
+                    console.error('Senha inválida.');
+                    return false;
+                }
+
+                // Se deu tudo certo;
+                return true;
+
+            }
+
+            // Método privado para validar e-mail com Regex.
+            #testEmail(email) {
+                const regex = /^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,15}$/;
+                return regex.test(email);
+            }
+
+            /**
+             * Método privado que valida a senha.
+             *      Mínimo de 7 e máximo de 32 caracteres;
+             *      Pelo menos uma letra maiúscula de A até Z;
+             *      Pelo menos uma letra minúscula de a até z;
+             *      Pelo menos um número de 0 à 9.
+             */
+            #testPass(pass) {
+                const regex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{7,32}$/;
+                return regex.test(pass);
+            }
+
+        }
+
+
+        // Instância de User.
+        var admin = new User();
+
+        // Insere dados do usuário.
+        if (
+            admin.setUser(
+                'Setembrino Trocatapas         Silva     ',
+                'set@brino.com',
+                '123'
+            )
+        )
+            // Exibe objeto.
+            console.log('admin: ', admin);
+
+        else
+            console.error('Falha ao cadastrar usuário');
+
+    </script>
+
+</body>
+
+</html>
