@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 1.1</title>
+</head>
+
+<body>
+    <script>
+
+        class Frutas {
+
+            #cor;
+            #sabor;
+            #peso;
+
+            setCor(cor) {
+                this.#cor = cor;
+            }
+            setSabor(sabor) {
+                this.#sabor = sabor;
+            }
+            setPeso(peso) {
+                this.#peso = peso;
+            }
+            getCor() {
+                return this.#cor;
+            }
+            getSabor() {
+                return this.#sabor;
+            }
+            getPeso() {
+                return this.#peso;
+            }
+
+        }
+        var banana = new Frutas();
+        banana.setCor('Amarela');
+        banana.setSabor('Meio-amargo');
+        banana.setPeso('86g')
+
+        console.log(banana);
+        document.write('BANANA:' + '<br>' + banana.getCor() + '<br>' + banana.getSabor() + '<br>' + banana.getPeso()+'<br>');
+
+        var abacaxi = new Frutas();
+        abacaxi.setCor('Amarelo-intenso');
+        abacaxi.setSabor('Doce');
+        abacaxi.setPeso('1,2kg');
+
+        console.log(abacaxi);
+        document.write('ABACAXI:' + '<br>' + abacaxi.getCor() + '<br>' + abacaxi.getSabor() + '<br>' + abacaxi.getPeso());
+
+    </script>
+</body>
+
+</html>
