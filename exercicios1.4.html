@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 1.4</title>
+</head>
+
+<body>
+    <script>
+        class Serie {
+            #titulo;
+            #lançamento;
+            #conclusao;
+            #temporadas;
+            #canal;
+
+            constructor(titulo) {
+                this.#setTitulo(titulo);
+            }
+            #setTitulo(titulo) {
+                this.#titulo = titulo;
+            }
+            setLancamento(lancamento) {
+                this.#lançamento = lancamento;
+            }
+            setConclusao(conclusao) {
+                this.#conclusao = conclusao;
+            }
+            setTemporadas(temporadas) {
+                this.#temporadas = temporadas;
+            }
+            setCanal(canal) {
+                this.#canal = canal;
+            }
+            getTitulo() {
+                return this.#titulo;
+            }
+            getLancamento() {
+                return this.#lançamento;
+            }
+            getConclusao() {
+                return this.#conclusao;
+            }
+            getTemporadas() {
+                return this.#temporadas;
+            }
+            getCanal() {
+                return this.#canal;
+            }
+        }
+var justiceiro = new Serie('Justiceiro');
+justiceiro.setLancamento('2018');
+justiceiro.setConclusao('2019');
+justiceiro.setTemporadas('2');
+justiceiro.setCanal('Netflix');
+
+console.log(justiceiro);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

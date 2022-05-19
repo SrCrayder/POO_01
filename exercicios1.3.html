@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 1.3</title>
+</head>
+<body>
+</body>
+
+<h1>Exercício 1.3</h1>
+<p>Diagrama dos Animais De Estimação!:</p>
+<table>
+<tr>
+    <th>AnimaisDeEstimacao</th>
+</tr>
+<tr>
+    <td>
+        - tamanho : string<br>
+        - especie : string<br>
+        - dieta : string<br>
+    </td>
+</tr>
+<tr>
+    <td>
+        + setTamanho(tamanho) : void<br>
+        + setEspecie(especie) : void<br>
+        + setDieta(dieta) : void<br>
+        <br>
+        + getTamanho() : string<br>
+        + getEspecie() : string<br>
+        + getDieta() : string<br>
+    </td>
+</tr>
+
+</table>
+<hr>    
+<script>
+
+class AnimaisDeEstimacao {
+
+#tamanho;
+#especie;
+#dieta;
+
+constructor(tamanho, especie, dieta){
+
+this.setTamanho(tamanho);
+this.setEspecie(especie);
+this.setDieta(dieta);
+}
+
+setTamanho(tamanho) {
+    this.#tamanho = tamanho;
+}
+setEspecie(especie) {
+    this.#especie = especie;
+}
+setDieta(dieta) {
+    this.#dieta = dieta;
+}
+getTamanho() {
+    return this.#tamanho;
+}
+getEspecie() {
+    return this.#especie;
+}
+getDieta() {
+return this.#dieta;
+}
+}
+
+var porquinho = new AnimaisDeEstimacao();
+porquinho.setTamanho('15cm');
+porquinho.setEspecie('Mamífero');
+porquinho.setDieta('Onívoro');
+
+console.log(porquinho);
+
+var furao = new AnimaisDeEstimacao();
+furao.setTamanho('22cm');
+furao.setEspecie('Mamífero');
+furao.setDieta('Carnívoro');
+
+console.log(furao);
+
+document.write('PORQUINHO:' + '<br>' + porquinho.getTamanho() + '<br>' + porquinho.getEspecie() + '<br>' + porquinho.getDieta() + '<br>');
+
+document.write('<br>' + 'FURAO:' + '<br>' + furao.getTamanho() + '<br>' + furao.getEspecie() + '<br>' + furao.getDieta());
+
+
+    
+</script>
+
+
+<style> body {
+    font-family: monospace;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin: auto;
+}
+
+th,
+td {
+    border: 1px solid black;
+    margin: 0;
+    padding: .5rem;
+}
+</style>
+
+
+</body>
+</html>

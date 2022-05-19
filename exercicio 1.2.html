@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 2.1</title>
+</head>
+
+<body>
+    <script>
+        class Carros {
+
+            #marca;
+            #modelo;
+            #cor;
+            #ano;
+
+            setMarca(marca) {
+                this.#marca = marca.trim();
+            }
+            setModelo(modelo) {
+                this.#modelo = modelo.trim();
+            }
+            setCor(cor) {
+                this.#cor = cor.trim();
+            }
+            setAno(ano) {
+                this.#ano = ano.trim();
+            }
+            getMarca() {
+                return this.#marca;
+            }
+            getModelo() {
+                return this.#modelo;
+            }
+            getCor() {
+                return this.#cor;
+            }
+            getAno() {
+                return this.#ano;
+            }
+        }
+
+        var fusca = new Carros();
+        fusca.setMarca('Volskwagen');
+        fusca.setModelo('Fusca 2.0 TSi AT');
+        fusca.setCor('Branco');
+        fusca.setAno('2016');
+
+        console.log(fusca);
+
+    </script>
+</body>
+
+</html>

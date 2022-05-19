@@ -17,13 +17,13 @@
             #peso;
 
             setCor(cor) {
-                this.#cor = cor;
+                this.#cor = cor.trim();
             }
             setSabor(sabor) {
-                this.#sabor = sabor;
+                this.#sabor = sabor.trim();
             }
             setPeso(peso) {
-                this.#peso = peso;
+                this.#peso = peso.trim();
             }
             getCor() {
                 return this.#cor;
@@ -37,17 +37,17 @@
 
         }
         var banana = new Frutas();
-        banana.setCor('Amarela');
-        banana.setSabor('Meio-amargo');
-        banana.setPeso('86g')
+        banana.setCor('Amarela.');
+        banana.setSabor('Meio-amargo.');
+        banana.setPeso('86g.')
 
         console.log(banana);
         document.write('BANANA:' + '<br>' + banana.getCor() + '<br>' + banana.getSabor() + '<br>' + banana.getPeso()+'<br>');
 
         var abacaxi = new Frutas();
-        abacaxi.setCor('Amarelo-intenso');
-        abacaxi.setSabor('Doce');
-        abacaxi.setPeso('1,2kg');
+        abacaxi.setCor('Amarelo-intenso.');
+        abacaxi.setSabor('Doce.');
+        abacaxi.setPeso('1,2kg.');
 
         console.log(abacaxi);
         document.write('ABACAXI:' + '<br>' + abacaxi.getCor() + '<br>' + abacaxi.getSabor() + '<br>' + abacaxi.getPeso());
