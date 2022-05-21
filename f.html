@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO 5.1</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Produto {
+
+            #origem
+            #preco
+            #marca
+            #codigo
+            #descricao
+
+            constructor(codigo) { this.setCodigo(codigo) }
+
+            setOrigem(origem) { this.#origem = origem }
+            setPreco(preco) { this.#preco = preco }
+            setMarca(marca) { this.#marca = marca }
+            setCodigo(codigo) { this.#codigo = codigo }
+            setDescricao(descricao) { this.#descricao = descricao }
+
+            getOrigem() { return this.#origem }
+            getPreco() { return this.#preco }
+            getMarca() { return this.#marca }
+            getCodigo() { return this.#codigo }
+            getDescricao() { return this.#descricao }
+
+        }
+
+        class Vestuario extends Produto {
+
+            #tipo
+            #tamanho
+            #cor
+
+            constructor(codigo, tipo) {
+                super(codigo) // Executar o construtor da classe pai                
+                this.setTipo(tipo)
+            }
+
+            setTipo(tipo) { this.#tipo = tipo }
+            setTamanho(tamanho) { this.#tamanho = tamanho }
+            setCor(cor) { this.#cor = cor }
+
+            getTipo() { return this.#tipo }
+            getTamanho() { return this.#tamanho }
+            getCor() { return this.#cor }
+
+        }
+
+        class Calca extends Vestuario {
+
+        }
+
+        var bone = new Vestuario('B0N3', 'Chapéu')
+
+        var jeans = new Calca('CODIGO', 'longas')
+
+        console.log(jeans)
+
+        
+        
+        
+            class Alimento extends Produto{
+                
+                #sabor
+                #gordura
+                #consistencia
+
+                constructor(codigo,sabor, gordura, consistencia){
+                    super(codigo)
+                    this.setGordura(gordura)
+                    this.setConsistencia(consistencia)
+                    this.setSabor(sabor)
+                }
+                setSabor(sabor) {this.#sabor = sabor}
+                setGordura(gordura) {this.#gordura = gordura}
+                setConsistencia(consistencia) {this.#consistencia = consistencia}
+
+                getSabor() {return this.#sabor}
+                getGordura() {return this.#gordura}
+                getConsistencia() {return this.#consistencia}
+
+
+            }
+            var miojoDeGalinhaCaipira= new Alimento('1222','salgado', '25g', 'molenga')
+            console.log(miojoDeGalinhaCaipira)
+
+            class Moveis extends Produto{
+                #madeira
+                #metal
+                #reciclavel
+
+                constructor(codigo,madeira, metal, reciclavel){
+                    super(codigo)
+                    this.setMetal(metal)
+                    this.setreciclavel(reciclavel)
+                    this.setMadeira(madeira)
+
+                }
+                setMadeira(madeira) {this.#madeira = madeira}
+                setMetal(metal) {this.#metal = metal}
+                setreciclavel(reciclavel) {this.#reciclavel = reciclavel}
+
+                getMadeira() {return this.#madeira}
+                getMetal() {return this.#metal}
+                getReciclavel() {return this.#reciclavel}
+
+            }
+            var reck = new Moveis('1333','R$:1000', 'R$:1400', 'R$:600')
+            console.log(reck)
+
+
+    
+
+    </script>
+
+</body>
+
+</html>
