@@ -1,0 +1,68 @@
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: rgb(235, 235, 235);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: url(../img/ss_ae8ae2947e0789d322ffc1cdddf0671888336da8.1920x1080.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    margin: 2% auto;
+    width: 80%;
+    text-align: left;
+    background: #ff000045;
+    border: 1px solid black
+}
+
+.mainav {
+    background-color: rgb(51, 0, 255);
+    color: rgb(0, 255, 38);
+    padding: 0 2%;
+    border-right: 1px solid black;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.mainav li {
+    display: inline;
+    padding: 0 2%;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    margin-left: 5%;
+}
+
+.mainav li a {
+    text-decoration: none;
+    color: rgb(255, 254, 254);
+    font-size: 14px;
+}
+
+.akuma {
+    
+    float: right 80%;
+    float: top 1000px;
+
+}
+
+.ryu {
+  
+    float: left 1000px;
+    float: top 400px;
+}
+
+.footer {
+    position: absolute;
+    top: 1350px;
+    right: 20%;
+}
